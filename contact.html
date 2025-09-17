@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Olle Malm</title>
     <!-- Tailwind CSS via CDN -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- AOS Animation Library -->
+<!-- Feather Icons -->
+<!-- Tailwind CSS via CDN (same as contact.html) -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- AOS Animation Library -->
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Feather Icons -->
@@ -22,12 +26,12 @@
     <!-- Header with Image -->
     <div class="header-image">
         <div class="header-text">
-            <img src="https://erikjarl.github.io/malmpsykolog/bildmapp/omlogga.png" alt="Olle Malm logga">
+            <img src="https://erikjarl.github.io/malmpsykolog/bildmapp/omlogga.png">
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav>
+    <nav class="bg-[#FAF7F2]" style="background-color: var(--background-color); margin-top:0.9rem">
         <div class="container mx-auto px-4">
             <div class="flex justify-center space-x-6 md:space-x-12">
                 <a href="index.html" class="nav-link font-medium">Hem</a>
@@ -38,33 +42,15 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
-        <div class="max-w-4xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <!-- Kontaktinformation Card -->
-                <div class="contact-info-card">
-                    <h2 class="text-2xl font-bold mb-6 text-primary">Kontaktinformation</h2>
-                    
-                    <div class="flex items-start mb-4">
-                        <i data-feather="map-pin" class="contact-icon"></i>
-                        <div>
-                            <h3 class="font-bold">Adress</h3>
-                            <p>Psykologkliniken</p>
-                            <p>Storgatan 12</p>
-                            <p>114 55 Stockholm</p>
-                        </div>
-                    </div>
-                    
+    </div>
                     <div class="flex items-start mb-4">
                         <i data-feather="phone" class="contact-icon"></i>
                         <div>
                             <h3 class="font-bold">Telefon</h3>
                             <p>08-123 45 67</p>
-                            <p class="text-sm text-gray-600">Mån–fre 09:00–17:00</p>
+                            <p class="text-sm text-gray-600">Mån-fre 09:00-17:00</p>
                         </div>
                     </div>
-                    
                     <div class="flex items-start mb-4">
                         <i data-feather="mail" class="contact-icon"></i>
                         <div>
@@ -72,20 +58,17 @@
                             <p>olle.malm@psykologkliniken.se</p>
                         </div>
                     </div>
-                    
                     <div class="flex items-start">
                         <i data-feather="clock" class="contact-icon"></i>
                         <div>
                             <h3 class="font-bold">Öppettider</h3>
-                            <p>Måndag – Fredag: 08:00 – 18:00</p>
-                            <p>Lördag – Söndag: Stängt</p>
+                            <p>Måndag - Fredag: 08:00 - 18:00</p>
+                            <p>Lördag - Söndag: Stängt</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Kontaktformulär Card -->
                 <div class="contact-info-card">
-                    <h2 class="text-2xl font-bold mb-6 text-primary">Kontaktformulär</h2>
+                    <h2 class="text-2xl font-bold mb-6" style="color: var(--primary-color);">Kontaktformulär</h2>
                     <form action="https://formspree.io/f/xjkezlwv" method="POST" id="contactForm">
                         <div>
                             <label for="name" class="block mb-1">Namn</label>
@@ -100,4 +83,94 @@
                             <input type="tel" id="phone" name="phone" class="form-input">
                         </div>
                         <div class="checkbox-container">
-                            <input type="checkbox" id="consent" name="co
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">Jag godkänner att mina uppgifter lagras enligt GDPR</label>
+                        </div>
+                        <button type="submit" id="submitBtn" class="btn-primary py-2 px-6 rounded disabled:opacity-50" disabled>Skicka</button>
+                    </form>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4" style="color: var(--primary-color);">Hitta hit</h2>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8143.549426503965!2d18.043834872704938!3d59.31813789585357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77e44abdd9a3%3A0x3fafad3eac89814b!2sMariatorget%2C%20Stockholm!5e0!3m2!1ssv!2sse!4v1757778120132!5m2!1ssv!2sse" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Olle Malm - leg. psykolog & psykoanalytiker. Alla rättigheter reserverade.</p>
+            <div class="mt-4">
+                <a href="#" class="text-white hover:text-gray-300 mx-2">Integritetspolicy</a>
+                <a href="#" class="text-white hover:text-gray-300 mx-2">Användarvillkor</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        // Enable submit button only when checkbox is checked
+        const consentCheckbox = document.getElementById('consent');
+        const submitBtn = document.getElementById('submitBtn');
+        
+        consentCheckbox.addEventListener('change', function() {
+            submitBtn.disabled = !this.checked;
+        });
+        
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            if (!consentCheckbox.checked) {
+                e.preventDefault();
+                alert('Du måste godkänna att dina uppgifter lagras för att kunna skicka formuläret.');
+            }
+        });
+
+        // Utökat felsökningsskript för att kontrollera fonttillämpning
+        window.onload = function() {
+            // Testa fonten på body
+            const bodyFont = window.getComputedStyle(document.body).fontFamily;
+            console.log('Body font:', bodyFont);
+
+            // Testa fonten på ett specifikt element (t.ex. en rubrik)
+            const heading = document.querySelector('h2');
+            if (heading) {
+                const headingFont = window.getComputedStyle(heading).fontFamily;
+                console.log('Heading font:', headingFont);
+            }
+
+            // Testa fonten på formulärinput
+            const input = document.querySelector('.form-input');
+            if (input) {
+                const inputFont = window.getComputedStyle(input).fontFamily;
+                console.log('Input font:', inputFont);
+            }
+
+            // Kontrollera om Montserrat laddas
+            const testElement = document.createElement('div');
+            testElement.style.fontFamily = "'Montserrat', 'Georgia', serif";
+            testElement.style.position = 'absolute';
+            testElement.style.visibility = 'hidden';
+            testElement.innerText = 'Test';
+            document.body.appendChild(testElement);
+            const computedFont = window.getComputedStyle(testElement).fontFamily;
+            console.log('Test element font:', computedFont);
+            document.body.removeChild(testElement);
+
+            // Kontrollera om fontfilen laddas
+            const fontLink = document.querySelector('link[href*="Montserrat"]');
+            if (fontLink) {
+                console.log('Google Fonts link found:', fontLink.href);
+            } else {
+                console.error('Google Fonts link not found!');
+            }
+        };
+    </script>
+</body>
+</html>
