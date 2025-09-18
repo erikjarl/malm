@@ -21,6 +21,12 @@ body {
 /* ===== Utility ===== */
 .text-primary { color: var(--primary-color); }
 
+header {
+    background-color: #E6DED2;
+    padding-top: env(safe-area-inset-top); /* extra utrymme för statusfältet på iPhone */
+  }
+  
+
 /* ===== Header (as in contact.html) ===== */
 .header-image {
     background-size: cover;
