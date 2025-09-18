@@ -68,6 +68,27 @@ header {
 .btn-primary { background-color: var(--primary-color); color: white; transition: all 0.3s ease; }
 .btn-primary:hover { background-color: var(--accent-color); }
 
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none; /* om du använder <a> */
+    transition: all 0.3s ease;
+    display: inline-block; /* viktigt för att centreras som text */
+    text-decoration: none; /* tar bort länk-understrykning */
+    margin-top: 12px; /* lite luft ovanför knappen */
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--accent-color);
+  }
+  
+
 /* ===== Forms ===== */
 .form-input {
     border: 1px solid var(--secondary-color);
