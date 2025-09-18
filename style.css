@@ -118,3 +118,29 @@ footer { background-color: var(--dark-color); color: white; padding: 2rem 0; mar
 .left::after { right: -10px; }
 .right::after { left: -10px; }
 .timeline-content { padding: 20px; background-color: white; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+@media (max-width: 600px) {
+    /* Flytta linjen till vänster */
+    .timeline::after {
+      left: 20px;
+    }
+  
+    /* Låt varje box ta 100% bredd */
+    .timeline-item {
+      width: 100%;
+      padding-left: 60px;  /* lite utrymme för linjen + cirkeln */
+      padding-right: 20px;
+    }
+  
+    /* Justera position på cirklarna */
+    .timeline-item::after {
+      left: 15px;
+    }
+  
+    /* Tvinga både left och right att se likadana ut */
+    .left, .right {
+      left: 0;
+      text-align: left;
+    }
+  }
+  
